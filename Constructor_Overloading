@@ -1,0 +1,37 @@
+using System;
+
+namespace Constructor_overloading
+{
+    class Car
+    {
+        public int carnum;
+        public string carmodel;
+        public double carprice;
+        
+        public Car(int mycarnum)
+        {
+            carnum = mycarnum;
+        }
+        public Car(string mycarmodel)
+        {
+            carmodel = mycarmodel;
+        }
+        public Car(string mycarmodel, double mycarprice)
+        {
+            carmodel = mycarmodel;
+            carprice = mycarprice;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Car number = new Car(1002);
+            Car model = new Car("Maruti");
+            Car price = new Car("Maruti ", 10238563.99);
+            Console.WriteLine(number.carnum);
+            Console.WriteLine(model.carmodel);
+            Console.WriteLine(price.carmodel + price.carprice);
+        }
+    }
+}
